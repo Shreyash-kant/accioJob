@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SignUp Form</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <!-- 1 Create form structure :done-->
+    <!-- 2 do not use label instead use placeholder to show what to input :done -->
+    <!-- 3 Css part -->
+    <!-- 4 set backround for all as rgba(0, 0, 0, 1) and font-->
+    <!-- 5 postion main_container in the center of the page -->
+    <header></header>
+    <main class="main_container">
+      <h1>Signup</h1>
+      <form method="post" class="form_container">
+        <input
+          type="text"
+          name="fullName"
+          id="fname"
+          class="block inp"
+          placeholder="Full Name"
+          required
+        />
+        <input
+          type="email"
+          name="eMail"
+          id="mailId"
+          class="block inp"
+          placeholder="Email"
+          required
+        />
+        <input
+          type="password"
+          name="password"
+          id="password"
+          class="block inp"
+          placeholder="Password"
+          required
+        />
+        <input
+          type="password"
+          name="confirmPassword"
+          id="cPassword"
+          class="block inp"
+          placeholder="Confirm Password"
+          required
+        />
+        <input
+          type="date"
+          name="date"
+          id="date"
+          class="block inp"
+          placeholder="MM/DD/YYYY"
+          required
+        />
+        <div class="divbox inp">
+          <span
+            ><input type="radio" name="profession" id="Student" required />
+            <label for="Student">Student</label></span
+          >
+          <span
+            ><input type="radio" name="profession" id="Teacher" required />
+            <label for="Teacher">Teacher</label></span
+          >
+        </div>
+        <div class="divbox inp">
+          <input type="checkbox" name="agreeTnC" id="agreement" required />
+          <label for="agreement">I agree to all the Terms and conditions</label>
+        </div>
+        <div>
+          <button id="submitbtn" type="submit">Submit</button>
+        </div>
+      </form>
+    </main>
+    <footer></footer>
+  </body>
+</html>
