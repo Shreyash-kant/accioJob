@@ -15,12 +15,22 @@ body{
     height: 100vh;
 
 }
+h1,h2{
+    font-family: var(--heading-fonts);
+}
+p{
+    font-family: var(--text-style);
+    line-height: 2rem;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
 header{
     width: 100%;
     height: 80px;
     background-color: var(--nav-bg);
     color:white;
     position: fixed;
+    z-index: 3;
 }
 header>nav{
     display: flex;
@@ -76,20 +86,70 @@ header>nav{
     align-items: flex-start;
     margin-left: 6.5rem;
     gap: 1rem;
-    z-index: 5;
+    z-index: 2;
 }
 .hero > div > h1{
     font-size: 6rem;
-    font-family: var(--heading-fonts);
+    
 }
 .hero > div > p{
     width: 80%;
-    font-family: var(--text-style);
-    line-height: 2rem;
 }
 #hrRuler{
     width: 80%;
     height: 0.7rem;
-    background-color:rgba(242, 76, 76, 1);
+    background-color:#f24c4c;
     align-self: flex-start;
+}
+/* About us Section */
+.aboutUs{
+width: 100%;
+background-color: black;
+color: white;
+height: 100%;
+}
+.aboutUs > .aboutus-header{
+    width: 100%;
+    height: 8rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.3rem;
+}
+.aboutus-header > .hr{
+    background-color: rgba(182, 40, 40, 1);
+    height: 0.4rem;
+    width: 20%;
+}
+.aboutus-header > h2{
+    font-weight: 300;
+    font-size: 3rem;
+}
+.aboutus-content{
+    width: 100%;
+    height: 90%;
+    display:flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding-inline: 10%;
+}
+.aboutus-content .left, .right{
+    width: 40%;
+    height: 50%;
+    margin-top: 3rem;
+}
+.aboutus-content > .left > .hr{
+    width: 80%;
+    height: 0.3rem;
+    background-color: rgba(242, 76, 76, 1);
+    margin-bottom: 1rem;
+}
+.aboutus-content > .right{
+background-image: url(./images/dough.png);
+background-size: contain;
+background-repeat: no-repeat;
+border-radius: 10px;
+
 }
