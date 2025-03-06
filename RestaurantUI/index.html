@@ -11,22 +11,27 @@
       <nav>
         <div class="heading"><h2>Pizza Restaurant</h2></div>
         <ul class="nav-links">
-          <li>ABOUT US</li>
-          <li>MENU</li>
-          <li>BLOGS</li>
-          <li>TESTIMONY</li>
-          <li>FIND US</li>
-          <li>OUR TEAM</li>
+          <li><a href="#about">ABOUT US</a></li>
+          <li><a href="#menu">MENU</a></li>
+          <li><a href="#blogs">BLOGS</a></li>
+          <li><a href="#testimony">TESTIMONY</a></li>
+          <li><a href="#find-us">FIND US</a></li>
+          <li><a href="#team">OUR TEAM</a></li>
         </ul>
         <div class="socials">
-          <img
-            src="./images/Rectangle 12.png"
-            alt="Instagram link"
-            id="instaImg"
-          /><img src="./images/FB.png" alt="Facebook link" /><img
-            src="./images/Whatsapp.png"
-            alt="whatsapp"
-          />
+          <a href="#" aria-label="Instagram">
+            <img
+              src="./images/Rectangle 12.png"
+              alt="Instagram link"
+              id="instaImg"
+            />
+          </a>
+          <a href="#" aria-label="Facebook">
+            <img src="./images/FB.png" alt="Facebook link" />
+          </a>
+          <a href="#" aria-label="WhatsApp">
+            <img src="./images/Whatsapp.png" alt="whatsapp" />
+          </a>
         </div>
       </nav>
     </header>
@@ -43,11 +48,12 @@
         </p>
       </div>
     </section>
+
     <!--About us-->
-    <section class="aboutUs">
-      <div class="aboutus-header">
+    <section class="aboutUs" id="about">
+      <div class="aboutus-header headers">
         <h2>About Us</h2>
-        <div class="hr"></div>
+        <div class="headingHr"></div>
       </div>
       <div class="aboutus-content">
         <div class="left">
@@ -62,7 +68,23 @@
             accusantium!
           </p>
         </div>
-        <div class="right"></div>
+        <div class="right">
+          <img src="./images/dough.png" alt="dough" />
+        </div>
+      </div>
+    </section>
+    <section class="menu" id="menu">
+      <div class="menu-header headers">
+        <h2>Menu</h2>
+        <div class="headingHr"></div>
+      </div>
+      <div class="menu-content">
+        <p>
+          Explore the wide range of pizza baked in fresh dough and vegetables.
+          Our pizza will tempt all your excitement and senses. Made with a
+          delicate balance of everything cheesy and spicy, you will get to
+          savour the best pizza in town.
+        </p>
       </div>
     </section>
   </body>
