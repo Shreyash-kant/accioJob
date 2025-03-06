@@ -138,6 +138,7 @@ width: 100%;
 background-color: black;
 color: white;
 min-height: 100vh;
+padding-top:60px;
 }
 .headers{
     width: 100%;
@@ -169,7 +170,7 @@ min-height: 100vh;
  .left,  .right{
     width: 40%;
     height: 50%;
-    margin-top: 3rem;
+    margin-top: 1rem;
 }
 .aboutus-content > .left > .hr{
     width: 80%;
@@ -178,10 +179,41 @@ min-height: 100vh;
     margin-bottom: 1rem;
 }
 .aboutus-content > .right > img{
-    height: 60%;
+    height: 40%;
+    width: 80%;
 border-radius: 10px;
 }
-@media screen and (max-width: 768px) {
+.tiles{
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+}
+.img_tiles > img{
+    width: 70%;
+}
+.grid-layout{
+    display:grid;
+    width: 100%;
+    grid-template-columns: repeat(2,1fr);
+    padding:5% 10%;
+    gap: 1rem;
+}
+.tiles-content_tiles > div{
+ text-transform: uppercase;
+ color: rgba(242, 201, 76, 1);
+ transition: color 0.3s ease;
+}
+.tiles-content_tiles > div:hover{
+    color: rgb(242, 76, 76);
+}
+.tiles-content_tiles{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 5px;
+}
+@media screen and (max-width<= 768px) {
     .nav-links {
         width: 80%;
         flex-wrap: wrap;
