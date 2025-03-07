@@ -133,7 +133,7 @@ header>nav{
     align-self: flex-start;
 }
 /* About us Section */
-.aboutUs,.menu{
+.aboutUs,.menu, .corousel{
 width: 100%;
 background-color: black;
 color: white;
@@ -188,9 +188,24 @@ border-radius: 10px;
     justify-content:flex-start;
     align-items: center;
 }
-.img_tiles > img{
-    width: 70%;
+.img_tiles{
+    width: 50%;
 }
+.img_tiles > img{
+    width: 90%;
+}
+.carousel-indicators [data-bs-target]{
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+}
+ button[data-bs-slide="next"]{
+   margin-right: 6rem;
+}
+button[data-bs-slide="prev"]{
+   margin-left: 6rem;
+}
+
 .grid-layout{
     display:grid;
     width: 100%;
