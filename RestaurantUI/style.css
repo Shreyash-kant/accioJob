@@ -300,6 +300,24 @@ div.findus-content{
     background-repeat: no-repeat;
     background-size: cover;
 }
+footer{
+    width: 100%;
+    height: 8rem;
+    background-color: black;
+    color: white;
+    padding-inline: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.contact{
+    margin-right: 10rem;
+}
+.contact img{
+    width: 20%;
+    height: 20%;
+    margin-inline: 0.5rem;
+}
 @media screen and (max-width<= 768px) {
     .nav-links {
         width: 80%;
