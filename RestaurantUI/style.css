@@ -133,7 +133,7 @@ header>nav{
     align-self: flex-start;
 }
 /* About us Section */
-.aboutUs,.menu, .corousel, .gallery{
+.aboutUs,.menu, .corousel, .gallery, .Findus{
 width: 100%;
 background-color: black;
 color: white;
@@ -164,9 +164,9 @@ padding-top:60px;
     height: 100%;
     display:flex;
     justify-content: space-around;
-    align-items: flex-start;
+    align-items: center;
     padding-inline: 10%;
-    margin-top: 2rem;
+    margin-top: 4rem;
 }
  .left,  .right{
     width: 40%;
@@ -208,20 +208,19 @@ button[data-bs-slide="prev"]{
 }
 .grid{
     display: grid;
-    
-    width: 60%;
-    height: max(29vw,400px);
+    width: 70%;
+    height: max(30vw,400px);
     margin-inline: auto;
     grid-template-rows: repeat(6,1fr);
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(5,1fr);
     gap: 0.5rem;
 }
 .grid-item1{
-   grid-column: 1 / 3;
+   grid-column: 1 / 4;
    grid-row:1 / 7 ;
 }
 .grid-item2{
-    grid-row: 1/3;
+    grid-row: 1 / 3;
 }
 .grid-item3{
     grid-row: 3 / 5;
@@ -242,7 +241,7 @@ button[data-bs-slide="prev"]{
     grid-template-columns: repeat(2,1fr);
     padding-block: 2%;
     gap: 0.9rem;
-    margin-inline: auto;
+    margin-inline: 12% 5%;
 }
 .tiles-content_tiles > div{
  text-transform: uppercase;
@@ -258,6 +257,48 @@ button[data-bs-slide="prev"]{
     justify-content: space-between;
     align-items: flex-start;
     gap: 5px;
+}
+div.findus-content{
+    width: 90%;
+    height: 70vh;
+    padding: 1rem;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.findus-content-left, .findus-content-right{
+    width: calc(50% - 1rem);
+    height: calc(100% - 2rem);
+}
+.findus-content-left{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+.findus-content-left img{
+    width:10%;
+    height: 10%;
+    padding-inline: 0.5rem;
+}
+.findus-address{
+    
+    height: 30%;
+    margin-top: 2rem;
+}
+.findus-address div{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.findus-content-right{
+    padding: 1rem;
+}
+.map{
+    height: 50%;
+    background: url("./images/map.png");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 @media screen and (max-width<= 768px) {
     .nav-links {
