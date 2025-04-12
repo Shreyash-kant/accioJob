@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="heading">New Employees</div>
+
+    <form action="" class="form-section">
+      <div class="inputContainer">
+        <div class="inputFields">
+          <label for="name">Enter Name</label>
+          <br />
+          <input type="text" name="Name" id="name" />
+        </div>
+        <div class="inputFields">
+          <label for="profession">Enter Profession</label>
+          <br />
+          <input type="text" name="Profession" id="profession" />
+        </div>
+        <div class="inputFields">
+          <label for="age">Enter Age</label>
+          <br />
+          <input type="text" name="Age" id="age" />
+        </div>
+      </div>
+
+      <button type="submit">Add User</button>
+    </form>
+
+    <div class="errorMessage"></div>
+    <p class="addedEmpHeader">Added Employees</p>
+    <div class="employeesContainer">
+      <p class="status">You have 0 Employees.</p>
+      <div class="employees">
+        <!-- this is going to the format to dynamically generate user-data markup -->
+        <!-- <div class="employee">
+          <div class="empdata">
+            <span>1</span><span>Name</span><span>Profession</span
+            ><span>Age</span>
+          </div>
+          <button>Delete User</button>
+        </div> -->
+      </div>
+    </div>
+  </body>
+</html>
