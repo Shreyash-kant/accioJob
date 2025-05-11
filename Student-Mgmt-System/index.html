@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Management</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- title bar at the top -->
+    <section class="nav-bar">Student Portal</section>
+    <!--search bar-->
+    <section class="search-bar margin-common padding-common">
+      <input type="text" placeholder="Search" id="search-bar" />
+      <button>Search</button>
+    </section>
+    <!--filter buttons section  -->
+    <section class="filters margin-common padding-common">
+      <button class="filter-btn" id="sortAZ">Sort A&rarr;Z</button>
+      <button class="filter-btn" id="sortZA">Sort Z&rarr;A</button>
+      <button class="filter-btn" id="sortMarks">Sort By Marks</button>
+      <button class="filter-btn" id="sortPass">Sort By Passing</button>
+      <button class="filter-btn" id="sortClass">Sort By Class</button>
+      <button class="filter-btn" id="sortGender">Sort By Gender</button>
+    </section>
+
+    <!-- female student separate section will be hidden and become visible when sorting based on gender is done -->
+    <section class="student-list margin-common padding-common" id="females">
+      <table>
+        <thead>
+          <tr>
+            <td>Id</td>
+            <td>Name</td>
+            <td>Female</td>
+            <td>Class</td>
+            <td>Marks</td>
+            <td>Passing</td>
+            <td>Email</td>
+          </tr>
+        </thead>
+        <tbody id="female-table-body"></tbody>
+      </table>
+    </section>
+
+    <section class="student-list margin-common padding-common" id="males">
+      <table>
+        <thead>
+          <tr>
+            <td>Id</td>
+            <td>Name</td>
+            <td>Male</td>
+            <td>Class</td>
+            <td>Marks</td>
+            <td>Passing</td>
+            <td>Email</td>
+          </tr>
+        </thead>
+        <tbody id="male-table-body"></tbody>
+      </table>
+    </section>
+
+    <!-- section: table of students -->
+    <section class="student-list margin-common padding-common">
+      <table>
+        <thead>
+          <tr>
+            <td>Id</td>
+            <td>Name</td>
+            <td>Gender</td>
+            <td>Class</td>
+            <td>Marks</td>
+            <td>Passing</td>
+            <td>Email</td>
+          </tr>
+        </thead>
+        <tbody id="table-body"></tbody>
+      </table>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
