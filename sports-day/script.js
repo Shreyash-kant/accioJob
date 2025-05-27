@@ -1,9 +1,9 @@
 function openingCeremony(race) {
-  let counter = 0;
+  let counter = 3;
   const intervalId = setInterval(() => {
-    counter++;
-    console.log("The event is going to start soon...");
-    if (counter === 3) {
+    console.log(`The event is going to start in ${counter}`);
+    counter--;
+    if (counter === 0) {
       clearInterval(intervalId);
       const scoreBoard = {
         red: 0,
@@ -51,6 +51,8 @@ function highJump(score, awardCeremony) {
   const winner = window.prompt("who is the winner of High Jump!");
   if (winner && valid.includes(winner.toLowerCase())) {
     score[winner.toLowerCase()] += 25;
+    console.log("Winner of high jump: ", winner.toUpperCase());
+    console.log("score board: ", score);
   } else {
     console.log("Invalid input or event cancelled; no points awarded.");
   }
