@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coin Tracker</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="crypto-navbar common-margin">
+      <div class="search-container">
+        <input type="text" id="search" placeholder="Search By Name or Symbol" />
+      </div>
+      <div class="sort-buttons">
+        <button id="sortMarketCap">Sort By Mkt Cap</button>
+        <button id="sortPercentage">Sort by percentage</button>
+      </div>
+    </nav>
+
+    <section class="crypto-table common-margin">
+      <table>
+        <thead>
+          <tr>
+            <th>Cryptocurrency</th>
+            <th>Symbol</th>
+            <th>Price</th>
+            <th>Total Volume</th>
+            <th>Change</th>
+            <th>Market Cap</th>
+          </tr>
+        </thead>
+        <tbody id="table-body"></tbody>
+      </table>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body,html{
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    color: white;
+}
+.crypto-navbar{
+/* border: 1px solid white; */
+width: 80%;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+align-items: center;
+padding: 0.5rem 1rem;
+}
+.crypto-table{
+    width: 80%;
+    table-layout: fixed;
+    /* border: 1px solid white; */
+    padding: 0.5rem 1rem;
+    
+}
+.crypto-table table{
+    width: 100%;
+    border-collapse: collapse;
+}
+.crypto-table th, .crypto-table td {
+  padding-block: 0.7rem;
+  text-align: left;
+  border-bottom: 1px solid #666;
+  /* border: 1px solid white; */
+}
+thead th{
+    color: yellow;
+}
+
+thead td,
+thead th,
+tbody td {
+  width: 8%; 
+}
+
+.search-container{
+    width: 70%;
+    
+}
+.search-container input {
+  padding: 0.625rem 1rem;
+  font-size: 0.9rem;
+  width: 100%;
+  max-width: 700px;
+  background-color: #111;
+  color: white;
+  border: 1px solid #444;
+  
+}
+.search-container input:focus {
+  outline: none;
+  box-shadow: none;
+  border: 1px solid yellow;
+}
+.sort-buttons button{
+    padding: 0.625rem 1rem;
+    background-color: black;
+    color: white;
+    border: 0.5px solid #444;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+.sort-buttons button:hover{
+    background-color: #222;
+}
+
+.common-margin{
+margin-inline: auto;
+margin-block: 2rem;
+}
+td > img {
+width: 20px;
+
+}
+.positive{
+    color:green;
+}
+.negative{
+    color: red;
+}
