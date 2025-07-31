@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100vh;
+    width: 100vw;
+}
+#output{
+    width: calc(100% - 2rem);
+    border: 1px solid green;
+    border-collapse: collapse;
+    margin: 1rem;
+}
+#output th{
+    background-color: lightyellow;
+    
+}
+#output td, #output th{
+    border: 1px solid green;
+    padding: 0.4rem 0.3rem;
+}
+button{
+    /* padding: 0.8rem 2rem; */
+    width: 200px;
+    height: 50px;
+    background-color: rgb(240, 128, 128);
+    text-align: center;
+    color: white;
+    font-weight: 600;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    
+    transition: background-color 1s ease;
+}
+button:hover{
+    background-color: rgba(240, 128, 128, 0.742);
+}
