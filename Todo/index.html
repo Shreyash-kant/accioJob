@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+    />
   </head>
   <body>
     <h1 id="header" class="custom-margin">To-Do List</h1>
@@ -14,8 +18,9 @@
         placeholder="Item Name"
         name="todo-name"
         id="todo-name"
+        required
       />
-      <input type="date" name="deadline" id="deadline" />
+      <input type="date" name="deadline" id="deadline" required />
       <select name="priority" id="priority-select" required>
         <option value="Priority" disabled selected>Priority</option>
         <option value="Low">Low</option>
@@ -27,12 +32,26 @@
 
     <!-- Todays todos -->
     <h1 class="todo-headings">Today's TodoList</h1>
-    <section id="today" class="custom-margin todo-container"></section>
+    <section id="today" class="custom-margin todo-container">
+      <!-- <div class="todos">
+        <p class="todo-name">Complete assignment</p>
+        <p class="deadline">01/02/2005</p>
+        <p class="priority">Priority: High</p>
+        <div class="icons">
+          <span class="material-symbols-outlined effect" id="tick">
+            check_circle </span
+          ><span class="material-symbols-outlined effect" id="trash">
+            delete
+          </span>
+        </div>
+      </div> -->
+    </section>
     <!-- Future todos -->
     <h1 class="todo-headings">Future TodoList</h1>
     <section id="future" class="custom-margin todo-container"></section>
     <!-- Completed todos -->
     <h1 class="todo-headings">Completed TodoList</h1>
     <section id="completed" class="custom-margin todo-container"></section>
+    <script type="text/javascript" src="script.js"></script>
   </body>
 </html>

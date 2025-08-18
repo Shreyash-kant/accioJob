@@ -46,12 +46,52 @@ select > option{
     color: white;
     cursor: pointer;
     font-size: large;
+    transition: background-color 0.2s ease-out;
+}
+.fields-container > button:hover{
+background-color: #444;
 }
 .todo-container{
     width: calc(100vw - 2rem);
     /* border: 1px solid green; */
+    padding-left: 0.5rem;
 }
 .todo-headings{
     width: calc(100vw - 2rem);
     margin: 1rem 0.5rem;
+}
+div.todos{
+    width: calc(100% - 1rem);
+    display: flex;
+    background-color: black;
+    color: white;
+    padding: 0.2rem;
+    /* border: 1px solid red; */
+    margin-block: 0.5rem;
+    border-radius: 0.5rem;
+    justify-content: space-between;
+}
+div.todos > p, div.todos div{
+/* border: 1px solid white; */
+padding: 0.3rem;
+width: 12%;
+/* font-size: larger; */
+}
+div.todos > div{
+    width: 8%;
+}
+div.todos > p.todo-name{
+    width: 35%;
+}
+div.icons{
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+.effect{
+    cursor:pointer;
+    transition: color 0.2s ease-out;
+}
+.effect:hover{
+    color:#444;
 }
