@@ -9,9 +9,6 @@ const savedCompletedTodos =
 const todaysTodos = [...savedTodayTodos];
 const futureTodos = [...savedFutureTodos];
 const completedTodos = [...savedCompletedTodos];
-//icons tick and delete
-const tick = document.getElementById("tick");
-const trash = document.getElementById("trash");
 
 //3 todo containers today's, future and completed
 const today = document.getElementById("today");
@@ -45,33 +42,43 @@ function createATodo(task, taskDate, taskPriority) {
   todo.priority = taskPriority;
   return todo;
 }
-function getMarkup(todo) {
-  return `<div class="todos">
+function getMarkup(todo, index, isCompleted = false) {
+  return `<div class="todos ${
+    isCompleted ? "completed" : ""
+  }" data-index="${index}">
         <p class="todo-name">${todo.name}</p>
         <p class="deadline">${todo.date}</p>
-        <p class="priority">Priority: ${todo.priority}</p>
+        <p class="priority">Priority:${todo.priority}</p>
         <div class="icons">
-          <span class="material-symbols-outlined effect" class="tick">
-            check_circle </span
-          ><span class="material-symbols-outlined effect" class="trash">
-            delete
-          </span>
+          <span class="material-symbols-outlined effect tick">check_circle</span
+          ><span class="material-symbols-outlined effect trash">delete</span>
         </div>
       </div>`;
 }
-function renderTodos() {
+function renderTodos(
+  renderToday = true,
+  renderFuture = true,
+  renderCompletd = true
+) {
   const TODAY = [...todaysTodos];
   const FUTURE = [...futureTodos];
-  if (TODAY) {
+  const COMPLETED = [...completedTodos];
+  if (TODAY && renderToday) {
     today.innerHTML = "";
-    TODAY.forEach((todo) => {
-      today.innerHTML += getMarkup(todo);
+    TODAY.forEach((todo, index) => {
+      today.innerHTML += getMarkup(todo, index);
     });
   }
-  if (FUTURE) {
+  if (FUTURE && renderFuture) {
     future.innerHTML = "";
-    FUTURE.forEach((todo) => {
-      future.innerHTML += getMarkup(todo);
+    FUTURE.forEach((todo, index) => {
+      future.innerHTML += getMarkup(todo, index);
+    });
+  }
+  if (COMPLETED && renderCompletd) {
+    completed.innerHTML = "";
+    COMPLETED.forEach((todo, index) => {
+      completed.innerHTML += getMarkup(todo, index, true);
     });
   }
 }
@@ -79,21 +86,60 @@ addBtn.addEventListener("click", () => {
   const name = todoName.value.trim();
   const date = new Date(deadline.value);
   const priority = prioritySelect.value;
-  //which
-  if (!name || !date || !priority) alert("Please provide all the inputs!");
+
+  if (!name || isNaN(date.getTime()) || !priority)
+    alert("Please provide all the inputs!");
   else {
     if (isToday(date)) {
       todaysTodos.push(createATodo(name, date, priority));
       localStorage.setItem("TodayTodos", JSON.stringify(todaysTodos));
-      renderTodos();
+      renderTodos(true, false, false);
     } else if (isFuture(date)) {
       futureTodos.push(createATodo(name, date, priority));
       localStorage.setItem("FutureTodos", JSON.stringify(futureTodos));
-      renderTodos();
+      renderTodos(false, true, false);
     }
   }
   todoName.value = "";
   deadline.value = "";
   prioritySelect.value = "Priority";
+});
+//todo transfer to completed seciton
+[today, future, completed].forEach((section) => {
+  section.addEventListener("click", (event) => {
+    const element = event.target;
+    const todoContainer = element.closest(".todos");
+    const index = todoContainer.dataset.index;
+    const sectionName = event.currentTarget.id;
+    if (element.tagName === "SPAN" && element.textContent === "check_circle") {
+      if (sectionName === "today") {
+        const todoObject = todaysTodos.splice(index, 1)[0];
+        completedTodos.push(todoObject);
+        localStorage.setItem("TodayTodos", JSON.stringify(todaysTodos));
+        localStorage.setItem("CompletedTodos", JSON.stringify(completedTodos));
+        renderTodos(true, false, true);
+      } else if (sectionName === "future") {
+        const todoObject = futureTodos.splice(index, 1)[0];
+        completedTodos.push(todoObject);
+        localStorage.setItem("FutureTodos", JSON.stringify(futureTodos));
+        localStorage.setItem("CompletedTodos", JSON.stringify(completedTodos));
+        renderTodos(false, true, true);
+      }
+    } else if (element.tagName === "SPAN" && element.textContent === "delete") {
+      if (sectionName === "today") {
+        todaysTodos.splice(index, 1);
+        localStorage.setItem("TodayTodos", JSON.stringify(todaysTodos));
+        renderTodos(true, false, false);
+      } else if (sectionName === "future") {
+        futureTodos.splice(index, 1);
+        localStorage.setItem("FutureTodos", JSON.stringify(futureTodos));
+        renderTodos(false, true, false);
+      } else if (sectionName === "completed") {
+        completedTodos.splice(index, 1);
+        localStorage.setItem("CompletedTodos", JSON.stringify(completedTodos));
+        renderTodos(false, false, true);
+      }
+    }
+  });
 });
 renderTodos();

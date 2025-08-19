@@ -95,3 +95,12 @@ div.icons{
 .effect:hover{
     color:#444;
 }
+.todos.completed {
+  background: white;
+  color: black;
+  border: 1px solid #ccc; /* optional, makes it look clean */
+}
+
+.todos.completed .tick {
+  display: none; /* hide check & delete icons */
+}
