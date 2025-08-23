@@ -102,7 +102,7 @@ addBtn.addEventListener("click", () => {
   }
   todoName.value = "";
   deadline.value = "";
-  prioritySelect.value = "Priority";
+  prioritySelect.selectedIndex = 0;
 });
 //todo transfer to completed seciton
 [today, future, completed].forEach((section) => {
