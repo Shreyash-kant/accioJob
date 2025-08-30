@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Time Zone API</h1>
+    <h1>Your Current Time Zone</h1>
+    <div id="time-zone-container">
+      <div class="labels-container">
+        <div class="label-name">Name of Time Zone:</div>
+        <p class="info"></p>
+      </div>
+      <div class="labels-container coord-container">
+        <div class="label-name latitude">
+          Lat:
+          <p class="info latitude-info"></p>
+        </div>
+
+        <div class="label-name longitude">
+          Long:
+          <p class="info longitude-info"></p>
+        </div>
+      </div>
+      <div class="labels-container">
+        <div class="label-name">Offset STD:</div>
+        <p class="info"></p>
+      </div>
+      <div class="labels-container">
+        <div class="label-name">Offset STD Seconds:</div>
+        <p class="info"></p>
+      </div>
+      <div class="labels-container">
+        <div class="label-name">Offset DST:</div>
+        <p class="info"></p>
+      </div>
+      <div class="labels-container">
+        <div class="label-name">Offset DST Seconds:</div>
+        <p class="info"></p>
+      </div>
+      <div class="labels-container">
+        <div class="label-name">Country:</div>
+        <p class="info"></p>
+      </div>
+      <div class="labels-container">
+        <div class="label-name">Postcode:</div>
+        <p class="info"></p>
+      </div>
+      <div class="labels-container">
+        <div class="label-name">City:</div>
+        <p class="info"></p>
+      </div>
+    </div>
+    <div class="input-container">
+      <h2>Enter Address</h2>
+      <input type="text" name="address" id="address" />
+      <button id="submit-btn">Submit</button>
+    </div>
+    <span id="error-message">Please Enter an Address!</span>
+    <h1 id="your-result">Your Result</h1>
+    <div id="result-container"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
